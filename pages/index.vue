@@ -13,6 +13,7 @@ import Logo from '~/components/Logo.vue';
 
 export default Vue.extend({
     name: "IndexPage",
-    components: { Login, Logo }
+    components: { Login, Logo },
+
 })
 </script>

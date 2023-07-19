@@ -3,17 +3,18 @@ export const state = () => ({
   });
   
   export const mutations = {
-    SET_USUARIO_AUTENTICADO(state, valor) {
+  userAutenticado(state, valor) {
       state.usuarioAutenticado = valor;
     }
   };
   
   export const actions = {
-    async iniciarSesion({ commit }, usuario) {
+    async iniciarSesion({ commit }) {
       // Lógica de autenticación (simulación de autenticación exitosa)
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      new Promise(resolve => setTimeout(resolve));
+      
   
       // Establecer el usuario como autenticado
-      commit('SET_USUARIO_AUTENTICADO', true);
+      commit('userAutenticado', true);
     }
   };
